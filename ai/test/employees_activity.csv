@@ -1,0 +1,11 @@
+employee_id,email,name,role,company,city,experience,joining_date,last_login,salary
+101,alice@gmail.com,Alice,Data Analyst,Google,New York,2,2022-06-15,2024-03-10,85000
+102,bob@yahoo.com,Bob,Software Engineer,Amazon,Texas,3,2021-08-01,2024-03-12,95000
+103,charlie@outlook.com,Charlie,ML Engineer,Meta,California,4,2020-01-20,2024-03-08,120000
+104,david@gmail.com,David,Backend Engineer,Netflix,Washington,5,2019-11-05,2024-03-01,130000
+105,eva@yahoo.com,Eva,Data Scientist,Google,New York,3,2021-04-18,2024-03-11,110000
+106,frank@gmail.com,Frank,Data Analyst,Amazon,Texas,1,2023-02-10,2024-03-09,78000
+107,grace@outlook.com,Grace,ML Engineer,Meta,California,2,2022-07-25,2024-03-07,98000
+108,helen@gmail.com,Helen,Software Engineer,Microsoft,Texas,4,2020-09-12,2024-03-06,105000
+109,ivan@yahoo.com,Ivan,Backend Engineer,Netflix,Washington,6,2018-05-30,2024-02-28,140000
+110,jane@gmail.com,Jane,Data Scientist,Google,New York,5,2019-03-22,2024-03-05,125000

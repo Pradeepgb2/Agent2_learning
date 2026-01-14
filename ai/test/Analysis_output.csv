@@ -1,0 +1,16 @@
+email_id,Company (Location),role_old,status
+chris.p@apex.com,apex solutions(dublin),it support specialist,company_changed
+sophia.t@everest.com,everest consulting(zurich),business analyst,company_changed
+victoria.n@lumina.com,lumina designs(new york),product designer,company_changed
+mark.d@fusion.com,fusion robotics(tokyo),robotics engineer,company_changed
+paula.s@quantum.com,quantum ai(singapore),machine learning engineer,company_changed
+brian.c@altair.com,altair security(chicago),cybersecurity analyst,company_changed
+rachel.p@cypher.com,cypher ai(london),ai ethics specialist,company_changed
+hailey.d@monarch.com,monarch industries(london),product analyst,company_changed
+colin.b@astro.com,astro cloud(chicago),cloud security specialist,company_changed
+ariana.l@polar.com,polar studios(toronto),design lead,company_changed
+sienna.b@crescent.com,crescent solutions(new york),operations lead,company_changed
+logan.k@serenity.com,serenity health(london),healthcare analyst,company_changed
+laura.d@avant.com,avant bi(london),business intelligence analyst,company_changed
+julian.h@maxwell.com,maxwell investments(toronto),investment analyst,role changed
+tristan.h@datacore.com,datacore(boston),data infrastructure engineer,role changed

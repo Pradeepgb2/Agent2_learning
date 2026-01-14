@@ -1,7 +1,35 @@
+from pathlib import Path
+from datetime import datetime
+import re
+
+# Path setup for directories
+BASE_DIR = Path(__file__).resolve().parents[2]
+RAW_DIR = BASE_DIR / 'scrapers'/'data' / 'raw'
+RAW_DIR.mkdir(parents=True, exist_ok=True)
+
+# Identify the two most recent datasets
+DATASET_PREFIX = 'employees_linkedin_data_'
+date_pattern = re.compile(r"(\d{4}-\d{2}-\d{2})")
+files_with_dates = []
+
+
+for file in RAW_DIR.glob(f"{DATASET_PREFIX}*.csv"):
+    match = date_pattern.search(file.name)
+    if match:
+        file_date = datetime.strptime(match.group(1), "%Y-%m-%d")
+        files_with_dates.append((file, file_date))
+files_with_dates.sort(key=lambda x: x[1], reverse=True)
+
+
+if len(files_with_dates) < 2:
+    new_file, prev_file = files_with_dates[0][0], files_with_dates[0][0]
+else:
+    new_file, prev_file = files_with_dates[0][0], files_with_dates[1][0]
+
 import pandas as pd
 
-employees_old = r"C:\Users\Narasimha\Desktop\ai_recruiting_infrastructure_agent2\scrapers\data\raw\employees_past_week.csv"
-employees_new = r"C:\Users\Narasimha\Desktop\ai_recruiting_infrastructure_agent2\scrapers\data\raw\employees_present_week.csv"
+employees_old = prev_file
+employees_new =  new_file
 
 # -------------------------
 # CONFIG
@@ -67,7 +95,7 @@ changed_rows = merged[company_changed | role_changed]
 # -------------------------
 # STATUS (NO APPLY)
 # -------------------------
-changed_rows["Status"] = "role changed"
+changed_rows.loc[role_changed, "Status"] = "role changed"
 changed_rows.loc[company_changed, "Status"] = "company changed"
 
 # -------------------------
@@ -87,9 +115,9 @@ new_dataset = changed_rows[
         "email_id": "Email",
         "role_old": "Position"
     }
-)
+).copy()
 
 new_dataset = new_dataset.reset_index(drop=True)
 new_dataset.index += 1
 
-new_dataset.to_csv(r"C:\Users\Narasimha\Desktop\Agent2_sample\ai\output\employee_changes_report.csv")
+new_dataset.to_csv(BASE_DIR / 'ai' / 'output' / 'employee_changes_report.csv', index=False)

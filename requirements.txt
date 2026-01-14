@@ -30,3 +30,4 @@ requests==2.31.0
 # Optional (safe to keep)
 # -------------------------
 python-multipart==0.0.9
+Kaggle==1.5.16

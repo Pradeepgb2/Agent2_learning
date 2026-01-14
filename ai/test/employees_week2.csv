@@ -1,0 +1,6 @@
+email_id,name,role,company,location
+alice@gmail.com,Alice,Senior Data Analyst,Google,NY
+bob@yahoo.com,Bob,Software Engineer,Microsoft,TX
+charlie@outlook.com,Charlie,ML Engineer,Meta,CA
+david@gmail.com,David,Backend Engineer,Netflix,WA
+eva@yahoo.com,Eva,Senior Data Scientist,Google,NY

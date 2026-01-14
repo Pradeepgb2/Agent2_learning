@@ -1,0 +1,9 @@
+student_id,name,age,marks,subject,city
+101,Alice,23,85.0,Math,New York
+102,Bob,24,78.0,Science,Chicago
+103,Charlie,22,82.0,Math,New York
+104,David,25,92.0,Science,Texas
+105,Eva,23,82.0,English,Chicago
+106,Frank,24,67.0,Math,Texas
+107,Grace,22,88.0,English,New York
+108,Helen,23,82.0,Science,Texas
